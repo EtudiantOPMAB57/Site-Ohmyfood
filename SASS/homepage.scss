@@ -178,119 +178,6 @@ nav {
 }
 
 
-/*************** Spinner *********/
-
-.spinner {
-    height: 100%;
-    background: white;
-    margin: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 20;
-    -webkit-animation: spinner 2s linear;
-    animation: spinner 2s linear;
-    visibility: hidden;
-}
-
-.spinner__border {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-pack: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border: 10px solid transparent;
-    border-top: 10px solid #9356DC;
-    border-bottom: 10px solid #ff79da;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    -webkit-animation: spinner__border 2s linear;
-    animation: spinner__border 2s linear;
-    visibility: hidden;
-}
-
-.spinner__center {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #99E2D0;
-}
-
-@-webkit-keyframes spinner {
-    0% {
-        visibility: visible;
-        opacity: 0.9;
-    }
-    70% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes spinner {
-    0% {
-        visibility: visible;
-        opacity: 0.9;
-    }
-    70% {
-        opacity: 0.9;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@-webkit-keyframes spinner__border {
-    0% {
-        visibility: visible;
-        opacity: 1;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes spinner__border {
-    0% {
-        visibility: visible;
-        opacity: 1;
-    }
-    70% {
-        opacity: 1;
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-
 /*************** Header *********/
 
 header {
@@ -679,6 +566,10 @@ h2 {
     margin-left: 20px;
 }
 
+.restaurants__liste {
+    width: 100%;
+}
+
 .heart {
     position: relative;
     z-index: 3;
@@ -711,35 +602,6 @@ h2 {
 
 input {
     display: none;
-}
-
-
-/* État initial du cœur */
-
-.heart-checkbox:not(:checked)+.heart-label .solid-heart {
-    opacity: 0;
-    -webkit-transition: 1s;
-    transition: 1s;
-}
-
-
-/* État cliqué du cœur */
-
-.heart-checkbox:checked+.heart-label .solid-heart {
-    opacity: 1;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(3%, #ff79da), color-stop(120%, #9356dc));
-    background: linear-gradient(#ff79da 3%, #9356dc 120%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-transition: 1s;
-    transition: 1s;
-}
-
-
-/* Masquer l'icône régulière lorsque le cœur est cliqué */
-
-.heart-checkbox:checked+.heart-label .fa-regular {
-    opacity: 0;
 }
 
 
@@ -834,6 +696,7 @@ footer {
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
         flex-direction: row;
+        flex-wrap: wrap;
     }
     header {
         height: 80px;
@@ -854,7 +717,29 @@ footer {
         box-shadow: 0px 5px 6px 0px;
         position: relative;
     }
-    /* La suite du css desktop ici =) */
+    .restaurants__liste {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .restaurants__liste a {
+        width: 45%;
+    }
+    .footer__block {
+        display: flex;
+        align-items: baseline;
+        flex-direction: row-reverse;
+        gap: 30px;
+    }
+    .footer__block-liens {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        gap: 10px;
+    }
 }
 
 
