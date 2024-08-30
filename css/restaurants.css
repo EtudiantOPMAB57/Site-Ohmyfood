@@ -105,7 +105,6 @@ p {
 }
 
 img {
-  overflow-clip-margin: content-box;
   overflow: clip;
 }
 
@@ -136,8 +135,8 @@ form {
 
 @-webkit-keyframes spin {
   0% {
-    -webkit-transform: rotate 0deg;
-            transform: rotate 0deg;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -147,8 +146,8 @@ form {
 
 @keyframes spin {
   0% {
-    -webkit-transform: rotate 0deg;
-            transform: rotate 0deg;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -438,7 +437,7 @@ p {
   background-color: #99E2D0;
   color: white;
   font-weight: bold;
-  font-size: 1, 3rem;
+  font-size: 1.3rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -555,12 +554,12 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #353535;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -571,8 +570,8 @@ footer {
   max-width: 1200px;
 }
 
-.footer-logo {
-  font-family: "Shrikhand", cursive;
+.footer-logo a {
+  font-family: "Shrikhand", serif;
   color: white;
   font-size: 20px;
   padding: 15px 0;
@@ -584,8 +583,8 @@ footer {
   display: inline-flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   width: auto;
 }
 
@@ -594,16 +593,17 @@ footer {
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   text-align: center;
   color: white;
   height: 30px;
   cursor: pointer;
+  margin-right: 10px;
 }
 
 .footer__block-link i {
@@ -613,6 +613,45 @@ footer {
 .footer__block-link__title {
   font-size: 16px;
   font-weight: 400;
-  font-family: "Shrikhand", cursive;
+  font-family: "Roboto", cursive;
+  color: white;
+}
+
+.footer__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+@media (min-width: 767.98px) {
+  .footer__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    gap: 30px;
+  }
+  .footer__block-liens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    gap: 10px;
+  }
 }
 /*# sourceMappingURL=restaurants.css.map */

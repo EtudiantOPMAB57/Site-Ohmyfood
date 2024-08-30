@@ -519,7 +519,6 @@ h2 {
 }
 
 .restaurants__card-image img {
-  overflow-clip-margin: content-box;
   overflow: clip;
 }
 
@@ -712,7 +711,7 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .restaurants__liste a {
+  .restaurants__card {
     width: 45%;
   }
   .footer__block {

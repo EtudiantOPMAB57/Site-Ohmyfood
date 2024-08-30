@@ -535,7 +535,6 @@ h2 {
 }
 
 .restaurants__card-image img {
-    overflow-clip-margin: content-box;
     overflow: clip;
 }
 
@@ -725,7 +724,7 @@ footer {
         gap: 20px;
         justify-content: center;
     }
-    .restaurants__liste a {
+    .restaurants__card {
         width: 45%;
     }
     .footer__block {
